@@ -130,6 +130,8 @@ router.route("/songs/:song_id")
             } else {
 
                 song.name = req.body.name;
+                song.title = req.body.title;
+                song.tabs = req.body.tabs;
                 song.save( function(err) {
 
                     message = "Song '"+ song.name +"' has been updated!";
